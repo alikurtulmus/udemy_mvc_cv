@@ -1,0 +1,23 @@
+﻿@using udemy_mvc_cv.Models.Entity
+@model List<TblHobiler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hobi Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+
+    {
+        <textarea rows="1" class="form-control" name="Aciklama1" style="background-color: orange; font-weight: bold;">@item.Aciklama1</textarea>
+        <textarea rows="5" class="form-control" name="Aciklama2">@item.Aciklama2</textarea>
+        <br />
+    }
+
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+</form>
